@@ -9,4 +9,8 @@ describe("Toros y Vacas -> ganar", () => {
     expect(torosyvacas.adivinar("2")).toEqual("");
   });
 
+  it("Si ingresamos como codigo 12 y nuestro intento es 2 deberia retornar '*'", () => {
+    const torosyvacas = new TorosYVacas("12");
+    expect(torosyvacas.adivinar("24")).toEqual("*");
+  });
 });

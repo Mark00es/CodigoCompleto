@@ -5,7 +5,9 @@ class TorosYVacas{
       adivinar(intento) {
           if(intento == this.codigoSecreto)
           return "Ganaste!";
-          else{return "";}
+          else if(this.codigoSecreto.includes(intento[0]))
+            return "*"
+          return "";
       }
 }
 export default TorosYVacas;
