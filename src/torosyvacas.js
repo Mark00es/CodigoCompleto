@@ -8,16 +8,13 @@ class TorosYVacas{
             return "Ganaste!";
         }*/
         for (var i = 0; i < this.codigoSecreto.length; i++) {
-            if (this.codigoSecreto.includes(intento[i])) {
+            if(this.codigoSecreto[i] == intento[i] ){
+                respuesta += "!";
+            }
+            else if(this.codigoSecreto.includes(intento[i])) {
             respuesta += "*";
             }
         }
-        if(intento[0] == this.codigoSecreto[0] && intento[1] == this.codigoSecreto[1]){
-            return "!!"
-        }
-        else if(intento[0] == this.codigoSecreto[0]){
-            return "!"
-        }        
         return respuesta;
     }
 }
