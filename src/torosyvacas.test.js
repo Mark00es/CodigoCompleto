@@ -1,9 +1,9 @@
 import TorosYVacas from "./torosyvacas";
 describe("Toros y Vacas -> ganar", () => {
-  it("Deberia responder 'Ganaste!' si se adivina el codigo secreto", () => {
+  /*it("Deberia responder 'Ganaste!' si se adivina el codigo secreto", () => {
     const torosyvacas = new TorosYVacas("3");
     expect(torosyvacas.adivinar("3")).toEqual("Ganaste!");
-  });
+  });*/
 
   it("Deberia responder '' si no  se adivina el codigo secreto", () => {
     const torosyvacas = new TorosYVacas("7");
@@ -31,5 +31,9 @@ describe("Toros y Vacas -> Pista de toros", () => {
   it("Si ingresamos como codigo 12 y nuestro intento es 14 deberia retornar '!'", () => {
     const torosyvacas = new TorosYVacas("12");
     expect(torosyvacas.adivinar("14")).toEqual("!");
-  });  
+  });
+  it("Si ingresamos como codigo 45 y nuestro intento es 45 deberia retornar '**'", () => {
+    const torosyvacas = new TorosYVacas("45");
+    expect(torosyvacas.adivinar("45")).toEqual("!!");
+  });
 });
