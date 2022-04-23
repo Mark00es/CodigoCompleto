@@ -3,7 +3,9 @@ class TorosYVacas{
         this.codigoSecreto = codigoSecreto;
       }
       adivinar(intento) {
-        return "Ganaste!";
+          if(intento == this.codigoSecreto)
+          return "Ganaste!";
+          else{return "";}
       }
 }
 export default TorosYVacas;
